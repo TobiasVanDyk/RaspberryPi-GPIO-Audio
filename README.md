@@ -5,6 +5,10 @@ Audio DAC interfaced through Raspberry Pi GPIO such as i2s
 
 [**Waveshare WM8960 Play/Record Audio Hat**](https://www.waveshare.com/wm8960-audio-hat.htm) with a [**Wiki**](https://www.waveshare.com/wiki/WM8960_Audio_HAT) and a [**Github repository**](https://github.com/waveshare/WM8960-Audio-HAT/).
 
+<p align="left">
+<img src="images/pic3.jpg" width="800" />  
+<br>
+  
 **Instructions for kernel 5.4x:**
 
 **Method A:** Start with last released raspios install image 2020-05-27-raspios-buster-full-armhf.img, then update it fully: sudo apt-get update, sudo apt-get upgrade -y, or whatever method you are used to. You will then end with a 5.45x kernel. Then do Step 1 and 2.
