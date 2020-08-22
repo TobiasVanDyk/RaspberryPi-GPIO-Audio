@@ -28,7 +28,7 @@ sudo nano /usr/share/alsa/alsa.conf
 sudo alsamixer
 
 ```
-The result is something like shown below - remember to select the wm8960 audio device and mixer in vlcplayer or audacious) and either the headphone or speaker as the mixer element.
+The result is something like shown below - remember to select the wm8960 audio device and mixer in vlcplayer (or audacious) and either the headphone or speaker as the mixer element.
 
 <p align="left">
 <img src="images/pic1.jpg" width="350" />  
