@@ -49,5 +49,5 @@ The result is something like shown below - remember to select the wm8960 audio d
  [**Raspberry Pi and Waveshare WM8960 Stereo CODEC General purpose module**](https://www.waveshare.com/wm8960-audio-board.htm)
 <p align="left">
 <img src="images/rpimodule1.jpg" width="300" />  
-<img src="images/rpimodule1.jpg" width="300" /> 
+<img src="images/rpimodule2.jpg" width="300" /> 
 <br>
