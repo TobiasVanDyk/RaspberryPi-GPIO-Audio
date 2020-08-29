@@ -56,6 +56,7 @@ The result is something like shown below - remember to select the wm8960 audio d
 
 The WM8960 CODEC is also used by the [**Seeed voicecard**](https://github.com/respeaker/seeed-voicecard) or [**ReSpeaker 2-Mics Pi HAT**](https://wiki.seeedstudio.com/ReSpeaker_2_Mics_Pi_HAT/).
 <p align="left">
-<img src="images/respeaker1.png" width="300" />  
+<img src="images/respeaker1.png" width="200" />  
 <img src="images/respeaker2.png" width="300" /> 
+<img src="images/SeedWM8960.png" width="300" />   
 <br
