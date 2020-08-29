@@ -6,7 +6,8 @@ Audio DAC interfaced through Raspberry Pi GPIO such as i2s
 [**Waveshare WM8960 Play/Record Audio Hat**](https://www.waveshare.com/wm8960-audio-hat.htm) with a [**Wiki**](https://www.waveshare.com/wiki/WM8960_Audio_HAT) and a [**Github repository**](https://github.com/waveshare/WM8960-Audio-HAT/).
 
 <p align="left">
-<img src="images/pic3.jpg" width="800" />  
+<img src="images/pic3.jpg" width="400" />  
+<img src="images/WM8960HatSchematic.jpg" width="300" /> 
 <br>
   
 **Instructions for kernel 5.4x:**
