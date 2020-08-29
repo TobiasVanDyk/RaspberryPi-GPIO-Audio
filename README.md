@@ -35,6 +35,19 @@ sudo alsamixer
 The result is something like shown below - remember to select the wm8960 audio device and mixer in vlcplayer (or audacious) and either the headphone or speaker as the mixer element.
 
 <p align="left">
-<img src="images/pic1.jpg" width="350" />  
-<img src="images/pic2.jpg" width="250" />  
+<img src="images/pic1.jpg" width="300" />  
+<img src="images/pic2.jpg" width="200" /> 
+<img src="images/rpirpi1.jpg" width="300" />   
+<br>
+  
+[**Waveshare WM8960 Stereo CODEC General purpose module**](https://www.waveshare.com/wm8960-audio-board.htm)
+<p align="left">
+<img src="images/module1.jpg" width="200" />  
+<img src="images/module2.jpg" width="200" /> 
+<br>
+ 
+ [**Raspberry Pi and Waveshare WM8960 Stereo CODEC General purpose module**](https://www.waveshare.com/wm8960-audio-board.htm)
+<p align="left">
+<img src="images/rpimodule1.jpg" width="300" />  
+<img src="images/rpimodule1.jpg" width="300" /> 
 <br>
