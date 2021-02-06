@@ -19,8 +19,8 @@ sudo ./uninstall.sh
 sudo reboot
 
 ```
-<Update to the new kernel, reboot and then delete the old folder WM8960-Audio-HAT. After the github clone below, but before the install, 
-[**download the modified wm8960.c from the Sybility-WM8960-Audio-HAT github**](https://github.com/Sybility/WM8960-Audio-HAT) and use it to replace the file in the WM8960-Audio-HAT folder.
+Update to the new kernel, reboot and then delete the old folder WM8960-Audio-HAT. After the github clone below, but before the install, 
+[**download the modified wm8960.c**](https://github.com/Sybility/WM8960-Audio-HAT) from the Sybility WM8960-Audio-HAT github, and use it to replace the file in the WM8960-Audio-HAT folder. For more information [**read about solving the kernel 5.10 issue here**](https://github.com/waveshare/WM8960-Audio-HAT/issues/24).
 ```
 git clone https://github.com/waveshare/WM8960-Audio-HAT
 cd WM8960-Audio-HAT
@@ -28,8 +28,7 @@ sudo ./install.sh
 sudo reboot
 
 ```
-Run alsamixer, press F6, select wm8960 audio, and check that the headphone volume is not 0 (if you are using that instead of the speaker output). For more information [**read the issue here**](https://github.com/waveshare/WM8960-Audio-HAT/issues/24).
-
+Run alsamixer, press F6, select wm8960 audio, and check that the headphone volume is not 0 (if you are using that instead of the speaker output). 
 
 ### Instructions for kernel 5.4.xx
 
