@@ -18,7 +18,8 @@ If the wm8960 waveshare driver is already installed then uninstall it before upd
 <br> sudo ./uninstall.sh
 <br> sudo reboot
 <br>
-<br>Delete the folder WM8960-Audio-HAT and then:
+<br>Update to the new kernel, reboot and then delete the old folder WM8960-Audio-HAT.
+<br>
 <br>git clone https://github.com/waveshare/WM8960-Audio-HAT
 <br>
 <br>[**Download wm8960.c from here**](https://github.com/Sybility/WM8960-Audio-HAT) and use it to replace the file in the WM8960-Audio-HAT folder.
@@ -32,6 +33,7 @@ If the wm8960 waveshare driver is already installed then uninstall it before upd
 <br>
 <br>For more information [**read the issue here**](https://github.com/waveshare/WM8960-Audio-HAT/issues/24).
 <br>
+
 
 **Instructions for kernel 5.4x:**
 
