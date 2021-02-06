@@ -26,10 +26,12 @@ If the wm8960 waveshare driver is already installed then uninstall it before upd
 <br>cd WM8960-Audio-HAT
 <br>sudo ./install.sh
 <br>sudo reboot
-<br>alsamixer
 <br>
-<br>Press F6 and select the wm8960 audio and check that the headphone volume is not 0 if you are using that.
+<br>alsamixer
+<br>Press F6 and select the wm8960 audio and check that the headphone volume is not 0 if you are using that instead of the speaker output.
+<br>
 <br>For more information [**read the issue here**](https://github.com/waveshare/WM8960-Audio-HAT/issues/24).
+<br>
 
 **Instructions for kernel 5.4x:**
 
