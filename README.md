@@ -12,17 +12,22 @@ Audio DAC interfaced through Raspberry Pi GPIO such as i2s
   
 **Instructions for kernel 5.10x:**
 
-If the wm8960 waveshare driver is already installed then uninstall it before updating the kernel to 5.10: 
+If the wm8960 waveshare driver is already installed then uninstall it before updating the kernel to 5.10:
+<br>
 <br>cd WM8960-Audio-HAT 
 <br> sudo ./uninstall.sh
-<br> suso reboot
-Delete the folder WM8960-Audio-HAT
+<br> sudo reboot
+<br>
+<br>Delete the folder WM8960-Audio-HAT and then:
 <br>git clone https://github.com/waveshare/WM8960-Audio-HAT
-<br>Then [**download wm8960.c from here**](https://github.com/Sybility/WM8960-Audio-HAT) and use it to replace the file in the WM8960-Audio-HAT folder.
+<br>
+<br>[**Download wm8960.c from here**](https://github.com/Sybility/WM8960-Audio-HAT) and use it to replace the file in the WM8960-Audio-HAT folder.
+<br>
 <br>cd WM8960-Audio-HAT
 <br>sudo ./install.sh
 <br>sudo reboot
 <br>alsamixer
+<br>
 <br>Press F6 and select the wm8960 audio and check that the headphone volume is not 0 if you are using that.
 <br>For more information [**read the issue here**](https://github.com/waveshare/WM8960-Audio-HAT/issues/24).
 
