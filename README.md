@@ -30,7 +30,7 @@ sudo reboot
 ```
 Run alsamixer, press F6, select wm8960 audio, and check that the headphone volume is not 0 (if you are using that instead of the speaker output). 
 
-**64bit kernel 5.10.11** Starting with the Aug 2020 Raspi OS 64 bit, which was then updated to kernel 5.11.8 (sudo apt full-upgrade), it also yielded a fully working WM8960 HAT using the compile method as above. All the configuration files and overlays are in the 64bit folder.
+**64bit kernel 5.10.11** Starting with the Aug 2020 Raspi OS 64 bit, which was then updated to kernel 5.10.11.v8+ (sudo apt full-upgrade), it also yielded a fully working WM8960 HAT using the compile method as above. All the configuration files and overlays are in the 64bit folder.
 
 <p align="left">
 <img src="64bit/64bitScrot.png" width="300" />  
