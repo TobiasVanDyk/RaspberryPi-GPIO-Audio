@@ -30,6 +30,14 @@ sudo reboot
 ```
 Run alsamixer, press F6, select wm8960 audio, and check that the headphone volume is not 0 (if you are using that instead of the speaker output). 
 
+**64bit kernel 5.11.xx** When the Aug 2020 Raspi OS 64 bit was ibnstalled, then updated to kernel 5.11.8, it also yielded a fully working WM8960 HAT after the compile as above. All the configuration files and overlays are in the 64bit folder. Use the same method as described above.
+
+<p align="left">
+<img src="64bit/64bitScrot.png" width="300" />  
+<img src="64bit/64bita.jpg" width="200" /> 
+<img src="64bit/64bitb.jpg" width="200" />   
+<br>
+
 ### Instructions for kernel 5.4.xx
 
 **Method A:** Start with last released raspios install image 2020-05-27-raspios-buster-full-armhf.img, then update it fully: sudo apt-get update, sudo apt-get upgrade -y, or whatever method you are used to. You will then end with a 5.45x kernel. Then do Step 1 and 2.
