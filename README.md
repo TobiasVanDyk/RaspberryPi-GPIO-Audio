@@ -10,7 +10,7 @@ Audio DAC interfaced through Raspberry Pi GPIO such as i2s
 <img src="images/WM8960HatSchematic.jpg" width="300" /> 
 <br>
   
-### Instructions for kernel 5.10.xx
+### Instructions for kernel 5.10.xx (2021)
 
 If the wm8960 waveshare driver is already installed then uninstall it before updating the kernel to 5.10:
 ```
@@ -30,7 +30,7 @@ sudo reboot
 ```
 Run alsamixer, press F6, select wm8960 audio, and check that the headphone volume is not 0 (if you are using that instead of the speaker output). 
 
-**64bit kernel 5.11.xx** Starting with the Aug 2020 Raspi OS 64 bit, which was then updated to kernel 5.11.8 (sudo apt full-upgrade), it also yielded a fully working WM8960 HAT using the compile method as above. All the configuration files and overlays are in the 64bit folder.
+**64bit kernel 5.10.11** Starting with the Aug 2020 Raspi OS 64 bit, which was then updated to kernel 5.11.8 (sudo apt full-upgrade), it also yielded a fully working WM8960 HAT using the compile method as above. All the configuration files and overlays are in the 64bit folder.
 
 <p align="left">
 <img src="64bit/64bitScrot.png" width="300" />  
@@ -38,7 +38,7 @@ Run alsamixer, press F6, select wm8960 audio, and check that the headphone volum
 <img src="64bit/64bitb.jpg" width="200" />   
 <br>
 
-### Instructions for kernel 5.4.xx
+### Instructions for kernel 5.4.xx (2020)
 
 **Method A:** Start with last released raspios install image 2020-05-27-raspios-buster-full-armhf.img, then update it fully: sudo apt-get update, sudo apt-get upgrade -y, or whatever method you are used to. You will then end with a 5.45x kernel. Then do Step 1 and 2.
 
