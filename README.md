@@ -12,7 +12,7 @@ Audio DAC interfaced through Raspberry Pi GPIO such as i2s
   
 ### Instructions for kernel 5.10.xx (2021)
 
-If the wm8960 waveshare driver is already installed then uninstall it before updating the kernel to 5.10:
+If the wm8960 waveshare driver is already installed then uninstall it before updating the kernel to 5.10.11:
 ```
 cd WM8960-Audio-HAT
 sudo ./uninstall.sh
