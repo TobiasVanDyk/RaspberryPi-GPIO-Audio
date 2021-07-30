@@ -1,0 +1,19 @@
+I'm using the WM8960 SoC codec as part of a custom kernel build at version 5.10.31.
+
+Audio playback works with Seeed's ReSpeaker 2-Mics Pi HAT after enabling a few switches that are off, and adjusting the volume
+
+amixer -c1 sset 'Left Input Mixer Boost' toggle
+amixer -c1 sset 'Left Output Mixer PCM' toggle
+amixer -c1 sset 'Right Input Mixer Boost' toggle
+amixer -c1 sset 'Right Output Mixer PCM' toggle
+amixer -c1 sset 'Headphone',0 100%,100%
+
+Sound capture however is very noisy, see test.wav.zip produced with
+
+arecord -f cd -Dhw:1 -d5 > test.wav
+
+Seeed's soundcard driver works without issue.
+
+Found no meaningful differences in alsa settings. See asound.state.txt vs seeed-asound.state.txt.
+
+https://github.com/raspberrypi/linux/issues/4384
