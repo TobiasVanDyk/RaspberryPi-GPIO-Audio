@@ -10,6 +10,21 @@ Audio DAC interfaced through Raspberry Pi GPIO such as i2s
 <img src="images/WM8960HatSchematic.jpg" width="300" /> 
 <br>
   
+### Instructions for kernel 5.15.xx (2022)
+
+To install first uninstall the old waveshare driver and reboot then delete the old WM8960-Audio-HAT folder.
+  
+```
+git clone https://github.com/dr-ni/WM8960-Audio-HAT
+cd WM8960-Audio-HAT
+sudo ./install.sh
+sudo reboot
+```
+  
+Ignore the message "failed to load i2s-mmap" - it does load from config.txt and it is required
+VLC now plays cleanly using ALSA + wm8960-soundcard-direct-mixer setting in VLC preferences->Audio-settings
+Using pulseaudio still has the noisy distortion. Change VLC audio preferences to use ALSA and the mixer to wm8960 direct mixer
+  
 ### Instructions for kernel 5.10.xx (2021)
 
 If the wm8960 waveshare driver is already installed then uninstall it before updating the kernel to 5.10.11:
