@@ -28,7 +28,7 @@ VLC now plays cleanly using ALSA + wm8960-soundcard-direct-mixer setting in VLC 
   
 For the settings see screenshot below [**First to Eleven's cover of Boulevard of Broken Dreams by Green Day**](https://www.youtube.com/watch?v=ilLTcTXTI0E)
 <p align="left">
-<img src="2022-04-08-124050_1920x1080_scrot.png" width="500" />  
+<img src="images/2022-04-08-124050_1920x1080_scrot.png" width="500" />  
 <br>
    
 ### Instructions for kernel 5.10.xx (2021)
