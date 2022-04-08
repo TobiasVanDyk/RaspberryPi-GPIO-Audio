@@ -13,7 +13,7 @@ Audio DAC interfaced through Raspberry Pi GPIO such as i2s
   
 ### Instructions for kernel 5.15.xx (2022)
 
-To install first uninstall the old waveshare driver and reboot then delete the old WM8960-Audio-HAT folder.
+To [**install**](https://github.com/dr-ni/WM8960-Audio-HAT) first uninstall the old waveshare driver and reboot then delete the old WM8960-Audio-HAT folder.
   
 ```
 git clone https://github.com/dr-ni/WM8960-Audio-HAT
