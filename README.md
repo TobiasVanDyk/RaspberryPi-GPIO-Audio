@@ -26,11 +26,13 @@ Ignore the message "failed to load i2s-mmap" - it does load from config.txt and 
   
 VLC now plays cleanly using ALSA + wm8960-soundcard-direct-mixer setting in VLC preferences->Audio-settings. Using pulseaudio still has the noisy distortion. Change VLC audio preferences to use ALSA and the mixer to wm8960 direct mixer.
   
-For the settings see screenshot below [**First to Eleven's cover of Boulevard of Broken Dreams by Green Day**](https://www.youtube.com/watch?v=ilLTcTXTI0E)
+For the settings see the screenshot below [**First to Eleven's cover of Boulevard of Broken Dreams by Green Day**](https://www.youtube.com/watch?v=ilLTcTXTI0E)
 <p align="left">
 <img src="images/2022-04-08-124050_1920x1080_scrot.png" width="500" />  
 <br>
-   
+
+If you use the headphones as primary output, use pavucontrol (sudo apt install pavucontrol), run it then and select wm8960-headphones instead of wm8960-speaker, and adjust the volume to above 0.
+  
 ### Instructions for kernel 5.10.xx (2021)
 
 If the wm8960 waveshare driver is already installed then uninstall it before updating the kernel to 5.10.11:
