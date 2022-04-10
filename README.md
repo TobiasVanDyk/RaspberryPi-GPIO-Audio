@@ -24,7 +24,7 @@ sudo reboot
   
 Ignore the message "failed to load i2s-mmap" - it does load from config.txt and it is required.
   
-VLC now plays cleanly using ALSA + wm8960-soundcard-direct-mixer setting in VLC preferences->Audio-settings. Using pulseaudio still has the noisy distortion. Change VLC audio preferences to use ALSA and the mixer to wm8960 direct mixer.
+VLC plays clearly when using an ALSA + wm8960-soundcard-direct-mixer setting in VLC Preferences -> Audio-settings. Using Pulseaudio here causes a noisy distortion. Also change other programs audio preferences to also use ALSA and a wm8960 direct mixer.
   
 For the settings see the screenshot below [**First to Eleven's cover of Boulevard of Broken Dreams by Green Day**](https://www.youtube.com/watch?v=ilLTcTXTI0E)
 <p align="left">
