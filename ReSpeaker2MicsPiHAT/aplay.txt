@@ -1,0 +1,114 @@
+tobias@raspberrypi:~ $ aplay -l
+**** List of PLAYBACK Hardware Devices ****
+card 0: Headphones [bcm2835 Headphones], device 0: bcm2835 Headphones [bcm2835 Headphones]
+  Subdevices: 8/8
+  Subdevice #0: subdevice #0
+  Subdevice #1: subdevice #1
+  Subdevice #2: subdevice #2
+  Subdevice #3: subdevice #3
+  Subdevice #4: subdevice #4
+  Subdevice #5: subdevice #5
+  Subdevice #6: subdevice #6
+  Subdevice #7: subdevice #7
+card 1: vc4hdmi0 [vc4-hdmi-0], device 0: MAI PCM i2s-hifi-0 [MAI PCM i2s-hifi-0]
+  Subdevices: 1/1
+  Subdevice #0: subdevice #0
+card 2: vc4hdmi1 [vc4-hdmi-1], device 0: MAI PCM i2s-hifi-0 [MAI PCM i2s-hifi-0]
+  Subdevices: 1/1
+  Subdevice #0: subdevice #0
+card 3: seeed2micvoicec [seeed-2mic-voicecard], device 0: bcm2835-i2s-wm8960-hifi wm8960-hifi-0 [bcm2835-i2s-wm8960-hifi wm8960-hifi-0]
+  Subdevices: 1/1
+  Subdevice #0: subdevice #0
+tobias@raspberrypi:~ $ 
+tobias@raspberrypi:~ $ aplay -L
+null
+    Discard all samples (playback) or generate zero samples (capture)
+lavrate
+    Rate Converter Plugin Using Libav/FFmpeg Library
+samplerate
+    Rate Converter Plugin Using Samplerate Library
+speexrate
+    Rate Converter Plugin Using Speex Resampler
+jack
+    JACK Audio Connection Kit
+oss
+    Open Sound System
+pulse
+    PulseAudio Sound Server
+upmix
+    Plugin for channel upmix (4,6,8)
+vdownmix
+    Plugin for channel downmix (stereo) with a simple spacialization
+default
+    Playback/recording through the PulseAudio sound server
+playback
+capture
+dmixed
+array
+hw:CARD=Headphones,DEV=0
+    bcm2835 Headphones, bcm2835 Headphones
+    Direct hardware device without any conversions
+plughw:CARD=Headphones,DEV=0
+    bcm2835 Headphones, bcm2835 Headphones
+    Hardware device with all software conversions
+sysdefault:CARD=Headphones
+    bcm2835 Headphones, bcm2835 Headphones
+    Default Audio Device
+dmix:CARD=Headphones,DEV=0
+    bcm2835 Headphones, bcm2835 Headphones
+    Direct sample mixing device
+usbstream:CARD=Headphones
+    bcm2835 Headphones
+    USB Stream Output
+hw:CARD=vc4hdmi0,DEV=0
+    vc4-hdmi-0, MAI PCM i2s-hifi-0
+    Direct hardware device without any conversions
+plughw:CARD=vc4hdmi0,DEV=0
+    vc4-hdmi-0, MAI PCM i2s-hifi-0
+    Hardware device with all software conversions
+sysdefault:CARD=vc4hdmi0
+    vc4-hdmi-0, MAI PCM i2s-hifi-0
+    Default Audio Device
+hdmi:CARD=vc4hdmi0,DEV=0
+    vc4-hdmi-0, MAI PCM i2s-hifi-0
+    HDMI Audio Output
+dmix:CARD=vc4hdmi0,DEV=0
+    vc4-hdmi-0, MAI PCM i2s-hifi-0
+    Direct sample mixing device
+usbstream:CARD=vc4hdmi0
+    vc4-hdmi-0
+    USB Stream Output
+hw:CARD=vc4hdmi1,DEV=0
+    vc4-hdmi-1, MAI PCM i2s-hifi-0
+    Direct hardware device without any conversions
+plughw:CARD=vc4hdmi1,DEV=0
+    vc4-hdmi-1, MAI PCM i2s-hifi-0
+    Hardware device with all software conversions
+sysdefault:CARD=vc4hdmi1
+    vc4-hdmi-1, MAI PCM i2s-hifi-0
+    Default Audio Device
+hdmi:CARD=vc4hdmi1,DEV=0
+    vc4-hdmi-1, MAI PCM i2s-hifi-0
+    HDMI Audio Output
+dmix:CARD=vc4hdmi1,DEV=0
+    vc4-hdmi-1, MAI PCM i2s-hifi-0
+    Direct sample mixing device
+usbstream:CARD=vc4hdmi1
+    vc4-hdmi-1
+    USB Stream Output
+hw:CARD=seeed2micvoicec,DEV=0
+    seeed-2mic-voicecard, bcm2835-i2s-wm8960-hifi wm8960-hifi-0
+    Direct hardware device without any conversions
+plughw:CARD=seeed2micvoicec,DEV=0
+    seeed-2mic-voicecard, bcm2835-i2s-wm8960-hifi wm8960-hifi-0
+    Hardware device with all software conversions
+sysdefault:CARD=seeed2micvoicec
+    seeed-2mic-voicecard, bcm2835-i2s-wm8960-hifi wm8960-hifi-0
+    Default Audio Device
+dmix:CARD=seeed2micvoicec,DEV=0
+    seeed-2mic-voicecard, bcm2835-i2s-wm8960-hifi wm8960-hifi-0
+    Direct sample mixing device
+usbstream:CARD=seeed2micvoicec
+    seeed-2mic-voicecard
+    USB Stream Output
+tobias@raspberrypi:~ $ 
