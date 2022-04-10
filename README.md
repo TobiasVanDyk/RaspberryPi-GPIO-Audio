@@ -31,9 +31,9 @@ For the settings see the screenshot below [**First to Eleven's cover of Boulevar
 <img src="images/2022-04-08-124050_1920x1080_scrot.png" width="500" />  
 <br>
 
-**Alternative install using the Seeed Voicecard Drivers**
+**Alternative install using the [Seeed Voicecard](https://www.seeedstudio.com/ReSpeaker-2-Mics-Pi-HAT.html) Drivers**
   
-To [**install**](https://github.com/HinTak/seeed-voicecard) first uninstall the waveshare WM8960 driver and reboot then delete the old WM8960-Audio-HAT folder. (It is better to remove power from the Raspberry Pi and HAT completely before installing these drivers.) 
+To [**install**](https://github.com/HinTak/seeed-voicecard) first uninstall the waveshare WM8960 driver and reboot then delete the old WM8960-Audio-HAT folder. (It is better to remove power from the Raspberry Pi and HAT completely before installing these drivers.) For more details about this HAT look [**here**]() or [**here**](httpswww.seeedstudio.comReSpeaker-2-Mics-Pi-HAT.html). 
   
 ```
 git clone https://github.com/HinTak/seeed-voicecard
