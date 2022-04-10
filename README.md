@@ -33,7 +33,7 @@ For the settings see the screenshot below [**First to Eleven's cover of Boulevar
 
 **Alternative install using the Seeed Voicecard Drivers**
   
-To [**install**](https://github.com/HinTak/seeed-voicecard) first uninstall the waveshare WM8960 driver and reboot then delete the old WM8960-Audio-HAT folder.  
+To [**install**](https://github.com/HinTak/seeed-voicecard) first uninstall the waveshare WM8960 driver and reboot then delete the old WM8960-Audio-HAT folder. (It is better to remove power from the Raspberry Pi and HAT completely before installing these drivers.) 
   
 ```
 git clone https://github.com/HinTak/seeed-voicecard
