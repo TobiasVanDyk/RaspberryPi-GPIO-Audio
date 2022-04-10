@@ -32,6 +32,7 @@ For the settings see the screenshot below [**First to Eleven's cover of Boulevar
 <br>
 
 **Alternative install using the Seeed Voicecard Drivers**
+  
 To [**install**](https://github.com/HinTak/seeed-voicecard) first uninstall the waveshare VM8960 driver and reboot then delete the old WM8960-Audio-HAT folder.  
   
 ```
