@@ -31,6 +31,15 @@ For the settings see the screenshot below [**First to Eleven's cover of Boulevar
 <img src="images/2022-04-08-124050_1920x1080_scrot.png" width="500" />  
 <br>
 
+**Alternative install using the Seeed Voicecard Drivers**
+To [**install**](https://github.com/HinTak/seeed-voicecard) first uninstall the waveshare VM8960 driver and reboot then delete the old WM8960-Audio-HAT folder.  
+  
+```
+git clone https://github.com/HinTak/seeed-voicecard
+cd seeed-voicecard
+sudo ./install.sh
+sudo reboot
+```
 If you use the headphones as primary output, use pavucontrol (sudo apt install pavucontrol), run it then and select wm8960-headphones instead of wm8960-speaker, and adjust the volume to above 0.
   
 ### Instructions for kernel 5.10.xx (2021)
