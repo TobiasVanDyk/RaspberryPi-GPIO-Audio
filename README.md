@@ -41,7 +41,9 @@ cd seeed-voicecard
 sudo ./install.sh
 sudo reboot
 ```
-If you use headphones as the primary output, use pavucontrol (sudo apt install pavucontrol), run it then and select wm8960-headphones instead of wm8960-speaker, and adjust the volume to above 0.
+**This seeeed install also [works](64bit-kernel-515xx/) on the 64bit kernel-5,15.xx. You may want to change kernel.img to kernel8.img in the install.sh but it is not necessary.**
+
+  If you use headphones as the primary output, use pavucontrol (sudo apt install pavucontrol), run it then and select wm8960-headphones instead of wm8960-speaker, and adjust the volume to above 0.
   
 ### Instructions for kernel 5.10.xx (2021)
 
