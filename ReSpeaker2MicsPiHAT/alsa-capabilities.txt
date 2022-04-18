@@ -1,0 +1,33 @@
+tobias@raspberrypi:~ $ bash <(wget -q -O - "https://gitlab.com/sonida/alsa-capabilities/-/raw/master/alsa-capabilities") -s
+1: `bcm2835 Headphones' Analog audio output on device bcm2835 Headphones
+    -hardware address:               hw:0,0  (or hw:Headphones,0)
+    -sample rates per format:        U8: 384000, 352800, 192000, 176400, 96000, 88200, 48000, 44100
+                                     S16_LE: 384000, 352800, 192000, 176400, 96000, 88200, 48000, 44100
+    -usb audio class:                (n/a)
+    -streamfile:                     (n/a)
+    -character device:               /dev/snd/pcmC0D0p
+    -monitor file:                   /proc/asound/card0/pcm0p/sub0/hw_params
+2: `MAI PCM i2s-hifi-0' Digital non-UAC audio output on device vc4-hdmi-0
+    -hardware address:               hw:1,0  (or hw:vc4hdmi0,0)
+    -sample rates per format:        IEC958_SUBFRAME_LE: 384000, 352800, 192000, 176400, 96000, 88200, 48000, 44100
+    -usb audio class:                (n/a)
+    -streamfile:                     (n/a)
+    -character device:               /dev/snd/pcmC1D0p
+    -monitor file:                   /proc/asound/card1/pcm0p/sub0/hw_params
+3: `MAI PCM i2s-hifi-0' Digital non-UAC audio output on device vc4-hdmi-1
+    -hardware address:               hw:2,0  (or hw:vc4hdmi1,0)
+    -sample rates per format:        (n/a)
+    -usb audio class:                (n/a)
+    -streamfile:                     (n/a)
+    -character device:               /dev/snd/pcmC2D0p
+    -monitor file:                   /proc/asound/card2/pcm0p/sub0/hw_params
+4: `bcm2835-i2s-wm8960-hifi wm8960-hifi-0' Digital non-UAC audio output on device seeed-2mic-voicecard
+    -hardware address:               hw:3,0  (or hw:seeed2micvoicec,0)
+    -sample rates per format:        S16_LE: 384000, 352800, 192000, 176400, 96000, 88200, 48000, 44100
+                                     S24_LE: 384000, 352800, 192000, 176400, 96000, 88200, 48000, 44100
+                                     S32_LE: 384000, 352800, 192000, 176400, 96000, 88200, 48000, 44100
+    -usb audio class:                (n/a)
+    -streamfile:                     (n/a)
+    -character device:               /dev/snd/pcmC3D0p
+    -monitor file:                   /proc/asound/card3/pcm0p/sub0/hw_params
+tobias@raspberrypi:~ $ 
