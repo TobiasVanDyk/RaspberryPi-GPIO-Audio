@@ -15,6 +15,20 @@ ALSA capabilities indicate this DAC to be up to 32bit audio resolution at a 384k
   
 ### Instructions for kernel 5.15.xx (2022)
 
+Currently (28 April 2022) there are three different ways to install the wm8960 soundcard on the new 5,15 kernel:
+
+**Install 1 - Use the new 26 April 2022 Waveshare Drivers:**
+```
+git clone https://github.com/waveshare/WM8960-Audio-HAT
+cd WM8960-Audio-HAT
+sudo ./install.sh
+sudo reboot
+```
+
+After the reboot aplay -l should show the wm8960 soundcard. To use it in VLC change the Audio settings to use ALSA and the direct wm8960 mixing device - it does not work with Pulseaudio. Note that the pulseaudio volume control in the Task Bar will not show a wm8960 sound option.
+
+**Install 2 - Use the April 2022 dr-ni modified Waveshare Drivers:**
+
 To [**install**](https://github.com/dr-ni/WM8960-Audio-HAT) first uninstall the old waveshare driver and reboot then delete the old WM8960-Audio-HAT folder.
   
 ```
@@ -33,7 +47,7 @@ For the settings see the screenshot below [**First to Eleven's cover of Boulevar
 <img src="images/2022-04-08-124050_1920x1080_scrot.png" width="500" />  
 <br>
 
-**Alternative install using the [Seeed Voicecard](https://www.seeedstudio.com/ReSpeaker-2-Mics-Pi-HAT.html) Drivers**
+**Install 3 - Install using the [Seeed Voicecard](https://www.seeedstudio.com/ReSpeaker-2-Mics-Pi-HAT.html) Drivers**
   
 To [**install**](https://github.com/HinTak/seeed-voicecard) first uninstall the waveshare WM8960 driver and reboot then delete the old WM8960-Audio-HAT folder. (It is better to remove power from the Raspberry Pi and HAT completely before installing these drivers.) For more details about this HAT look [**here**](https://github.com/TobiasVanDyk/RaspberryPi-GPIO-Audio/tree/master/ReSpeaker2MicsPiHAT) or [**here**](https://www.seeedstudio.com/ReSpeaker-2-Mics-Pi-HAT.html). This driver works without adjustments to audio settings.
   
@@ -46,6 +60,7 @@ sudo reboot
 **This seeed install also [works](64bit-kernel-515xx/) on the 64bit kernel-5,15.xx. You may want to change kernel.img to kernel8.img in the install.sh but it is not necessary.**
 
   If you use headphones as the primary output, use pavucontrol (sudo apt install pavucontrol), run it then and select wm8960-headphones instead of wm8960-speaker, and adjust the volume to above 0.
+  
   
 ### Instructions for kernel 5.10.xx (2021)
 
