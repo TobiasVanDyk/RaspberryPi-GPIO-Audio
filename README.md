@@ -15,7 +15,7 @@ ALSA capabilities indicate this DAC to be up to 32bit audio resolution at a 384k
   
 ### Instructions for kernel 5.15.xx (2022)
 
-Currently (28 April 2022) there are three different ways to install the wm8960 soundcard on the new 5,15 kernel:
+Currently (28 April 2022) there are three different ways to install the wm8960 soundcard on the new 5.15 kernel:
 
 **Install 1 - Use the new 26 April 2022 Waveshare Drivers:**
 ```
