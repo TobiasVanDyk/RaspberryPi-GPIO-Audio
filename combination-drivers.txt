@@ -1,0 +1,31 @@
+https://github.com/waveshare/WM8960-Audio-HAT/issues/44#issuecomment-1113349654
+
+Big Thanks @dr-ni for your work. Now i can use the module in the Raspi Desktop although i use the newer dtoverlay=vc4-kms-v3d in the config.txt. And this without noise. I wish to sum up all steps:
+I uninstalled the unworking WM8960-Audio-HAT from WAVESHARE and deleted the files that i downloaded from the WAVESHARE repo.
+I made git clone https://github.com/dr-ni/WM8960-Audio-HAT in my user directory of my Raspi 4 (32bit Desktop), (attatched with the WM8960 audio module and two speakers and a 7 inch touch display).
+cd WM8960-Audio-HAT
+sudo ./install.sh
+sudo reboot
+
+Ignore the message "failed to load i2s-mmap" as @TobiasVanDyk mentined.
+Then, in the grafical desktop of the raspi you make a rigth click on the speaker symbol and select the wm8960-soundcard. After this you can open Chromium and play a youtube video. You will hear the music, but with some noise.
+
+The next steps will install other drivers for the wm8960-soundcard. Only a new driver, the rest should come from the repo of @dr-ni and stay.
+
+First i run cd WM8960-Audio-HAT and sudo ./uninstall.sh to uninstall the driver from @dr-ni .
+Then cd .. and git clone https://github.com/HinTak/seeed-voicecard
+cd seeed-voicecard
+make clean
+make
+sudo ./install.sh
+
+The install.sh script above shows some errors in the midle of working. You need to reboot and run it again.
+
+Then the necessary drivers are installed. Now you can run the install.sh from @dr-ni again, but before i changed this script a little bit. I opened WM8960-Audio-HAT/install.sh and changed this line:
+install_module "./" "wm8960-soundcard" to #install_module "./" "wm8960-soundcard"
+
+Then run again the install script:
+cd WM8960-Audio-HAT
+sudo ./install.sh
+
+I think a cold boot is necessary. Finish! Now you can open Chromium in Raspi Desktop and hear a youtube video without additional noise. Thanks to above two repos. Thanks @dr-ni .
