@@ -27,7 +27,7 @@ sudo ./install.sh
 sudo reboot
 ```
 
-After the reboot aplay -l should show the wm8960 soundcard. To use it in VLC change the Audio settings to use ALSA and the direct wm8960 mixing device - it does not work with Pulseaudio. Note that the pulseaudio volume control in the Task Bar will not show a wm8960 sound option.
+After the reboot aplay -l should show the wm8960 soundcard. To use it in VLC change the Audio settings to use ALSA and the direct wm8960 mixing device - it does not work with Pulseaudio. With this method the (default) pulseaudio volume control on the task bar will not have a wm8960 sound device option - the other two methods do enable a wm8960 sound-device selection via the task bar's pulseaudio volume control.
 
 **Install 2 - Use the April 2022 dr-ni modified Waveshare Drivers:**
 
