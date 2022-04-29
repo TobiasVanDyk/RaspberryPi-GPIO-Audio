@@ -51,7 +51,7 @@ For the settings see the screenshot below [**First to Eleven's cover of Boulevar
 
 **Install 3 - Install using the [Seeed Voicecard](https://www.seeedstudio.com/ReSpeaker-2-Mics-Pi-HAT.html) Drivers**
   
-To [**install**](https://github.com/HinTak/seeed-voicecard) first uninstall the waveshare WM8960 driver and reboot then delete the old WM8960-Audio-HAT folder. (It is better to remove power from the Raspberry Pi and HAT completely before installing these drivers.) For more details about this HAT look [**here**](https://github.com/TobiasVanDyk/RaspberryPi-GPIO-Audio/tree/master/ReSpeaker2MicsPiHAT) or [**here**](https://www.seeedstudio.com/ReSpeaker-2-Mics-Pi-HAT.html). This driver works without adjustments to audio settings.
+To [**install**](https://github.com/HinTak/seeed-voicecard) first uninstall the waveshare WM8960 driver and reboot then delete the old WM8960-Audio-HAT folder. (It is better to remove power from the Raspberry Pi and HAT completely before installing these drivers.) For more details about this HAT look [**here**](https://github.com/TobiasVanDyk/RaspberryPi-GPIO-Audio/tree/master/ReSpeaker2MicsPiHAT) or [**here**](https://www.seeedstudio.com/ReSpeaker-2-Mics-Pi-HAT.html). This driver works without any adjustments to audio settings (i.e. works with both pulseaudio and alsa without distortion or noise).
   
 ```
 git clone https://github.com/HinTak/seeed-voicecard
@@ -61,7 +61,7 @@ sudo reboot
 ```
 **This seeed install also [works](64bit-kernel-515xx/) on the 64bit kernel-5,15.xx. You may want to change kernel.img to kernel8.img in the install.sh but it is not necessary.**
 
-  If you use headphones as the primary output, use pavucontrol (sudo apt install pavucontrol), run it then and select wm8960-headphones instead of wm8960-speaker, and adjust the volume to above 0.
+If you use headphones as the primary output, use pavucontrol (sudo apt install pavucontrol), run it then and select wm8960-headphones instead of the wm8960-speaker, and adjust the neadphone volume to above 0. This will make the headphone level sticky.
   
   
 ### Instructions for kernel 5.10.xx (2021)
