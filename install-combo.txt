@@ -1,0 +1,412 @@
+pi@raspberrypi:~ $ sudo apt update
+Hit:1 http://raspbian.raspberrypi.org/raspbian bullseye InRelease
+Hit:2 http://archive.raspberrypi.org/debian bullseye InRelease
+Reading package lists... Done                             
+Building dependency tree... Done
+Reading state information... Done
+All packages are up to date.
+pi@raspberrypi:~ $ cd WM8960-Audio-HAT
+pi@raspberrypi:~/WM8960-Audio-HAT $ sudo ./uninstall.sh
+remove dtbos
+remove alsa configs
+disabled service 
+Removed /etc/systemd/system/sysinit.target.wants/wm8960-soundcard.service.
+remove wm8960-soundcard
+remove dkms
+
+-------- Uninstall Beginning --------
+Module:  wm8960-soundcard
+Version: 1.0
+Kernel:  5.15.32-v7l+ (armv7l)
+-------------------------------------
+
+Status: Before uninstall, this module version was ACTIVE on this kernel.
+
+snd-soc-wm8960.ko:
+ - Uninstallation
+   - Deleting from: /lib/modules/5.15.32-v7l+/kernel/sound/soc/codecs/
+ - Original module
+   - Archived original module found in the DKMS tree
+   - Moving it to: /lib/modules/5.15.32-v7l+/kernel/sound/soc/codecs/
+
+snd-soc-wm8960-soundcard.ko:
+ - Uninstallation
+   - Deleting from: /lib/modules/5.15.32-v7l+/kernel/sound/soc/bcm/
+ - Original module
+   - No original module was found for this module on this kernel.
+   - Use the dkms install command to reinstall any previous module version.
+
+depmod.......
+
+Removing original_module from DKMS tree for kernel 5.15.32-v7l+ (armv7l)
+
+DKMS: uninstall completed.
+remove kernel modules
+rm: cannot remove '/lib/modules/5.15.32-v7l+/kernel/sound/soc/codecs/snd-soc-wm8960-soundcard.ko': No such file or directory
+------------------------------------------------------
+Please reboot your raspberry pi to apply all settings
+Thank you!
+------------------------------------------------------
+pi@raspberrypi:~/WM8960-Audio-HAT $ 
+
+
+SWITCH OFF - SWITCH ON
+
+
+pi@raspberrypi:~/WM8960-Audio-HAT $ cd ..
+pi@raspberrypi:~ $ git clone https://github.com/HinTak/seeed-voicecard
+Cloning into 'seeed-voicecard'...
+remote: Enumerating objects: 1339, done.
+remote: Counting objects: 100% (363/363), done.
+remote: Compressing objects: 100% (16/16), done.
+remote: Total 1339 (delta 352), reused 347 (delta 347), pack-reused 976
+Receiving objects: 100% (1339/1339), 1.14 MiB | 345.00 KiB/s, done.
+Resolving deltas: 100% (884/884), done.
+pi@raspberrypi:~ $ cd seeed-voicecard
+pi@raspberrypi:~/seeed-voicecard $ make clean
+make -C /lib/modules/5.15.32-v7l+/build M=/home/pi/seeed-voicecard clean
+make[1]: Entering directory '/usr/src/linux-headers-5.15.32-v7l+'
+make[1]: Leaving directory '/usr/src/linux-headers-5.15.32-v7l+'
+pi@raspberrypi:~/seeed-voicecard $ make
+make -C /lib/modules/5.15.32-v7l+/build M=/home/pi/seeed-voicecard modules
+make[1]: Entering directory '/usr/src/linux-headers-5.15.32-v7l+'
+  CC [M]  /home/pi/seeed-voicecard/wm8960.o
+  LD [M]  /home/pi/seeed-voicecard/snd-soc-wm8960.o
+  CC [M]  /home/pi/seeed-voicecard/ac108.o
+  CC [M]  /home/pi/seeed-voicecard/ac101.o
+  LD [M]  /home/pi/seeed-voicecard/snd-soc-ac108.o
+  CC [M]  /home/pi/seeed-voicecard/seeed-voicecard.o
+  LD [M]  /home/pi/seeed-voicecard/snd-soc-seeed-voicecard.o
+  MODPOST /home/pi/seeed-voicecard/Module.symvers
+  CC [M]  /home/pi/seeed-voicecard/snd-soc-ac108.mod.o
+  LD [M]  /home/pi/seeed-voicecard/snd-soc-ac108.ko
+  CC [M]  /home/pi/seeed-voicecard/snd-soc-seeed-voicecard.mod.o
+  LD [M]  /home/pi/seeed-voicecard/snd-soc-seeed-voicecard.ko
+  CC [M]  /home/pi/seeed-voicecard/snd-soc-wm8960.mod.o
+  LD [M]  /home/pi/seeed-voicecard/snd-soc-wm8960.ko
+make[1]: Leaving directory '/usr/src/linux-headers-5.15.32-v7l+'
+pi@raspberrypi:~/seeed-voicecard $ sudo ./install.sh
+Hit:1 http://raspbian.raspberrypi.org/raspbian bullseye InRelease
+Hit:2 http://archive.raspberrypi.org/debian bullseye InRelease  
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+All packages are up to date.
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+raspberrypi-kernel is already the newest version (1:1.20220331-1).
+raspberrypi-kernel-headers is already the newest version (1:1.20220331-1).
+The following package was automatically installed and is no longer required:
+  libfuse2
+Use 'sudo apt autoremove' to remove it.
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+E: Unable to locate package linux-raspi
+E: Unable to locate package linux-headers-raspi
+E: Unable to locate package linux-image-raspi
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+dkms is already the newest version (2.8.4-3).
+git is already the newest version (1:2.30.2-1).
+i2c-tools is already the newest version (4.2-1+b1).
+libasound2-plugins is already the newest version (1.2.2-2).
+The following package was automatically installed and is no longer required:
+  libfuse2
+Use 'sudo apt autoremove' to remove it.
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+
+Creating symlink /var/lib/dkms/seeed-voicecard/0.3/source ->
+                 /usr/src/seeed-voicecard-0.3
+
+DKMS: add completed.
+
+Kernel preparation unnecessary for this kernel.  Skipping...
+
+Building module:
+cleaning build area...
+make -j4 KERNELRELEASE=5.15.32-v7l+ -C /lib/modules/5.15.32-v7l+/build M=/var/lib/dkms/seeed-voicecard/0.3/build....
+cleaning build area...
+
+DKMS: build completed.
+
+snd-soc-wm8960.ko:
+Running module version sanity check.
+ - Original module
+   - No original module exists within this kernel
+ - Installation
+   - Installing to /lib/modules/5.15.32-v7l+/kernel/sound/soc/codecs/
+
+snd-soc-ac108.ko:
+Running module version sanity check.
+ - Original module
+   - No original module exists within this kernel
+ - Installation
+   - Installing to /lib/modules/5.15.32-v7l+/kernel/sound/soc/codecs/
+
+snd-soc-seeed-voicecard.ko:
+Running module version sanity check.
+ - Original module
+   - No original module exists within this kernel
+ - Installation
+   - Installing to /lib/modules/5.15.32-v7l+/kernel/sound/soc/bcm/
+
+depmod......
+
+DKMS: install completed.
+cp: cannot stat 'seeed-2mic-voicecard.dtbo': No such file or directory
+cp: cannot stat 'seeed-4mic-voicecard.dtbo': No such file or directory
+cp: cannot stat 'seeed-8mic-voicecard.dtbo': No such file or directory
+setup git config
+git init
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: is subject to change. To configure the initial branch name to use in all
+hint: of your new repositories, which will suppress this warning, call:
+hint: 
+hint: 	git config --global init.defaultBranch <name>
+hint: 
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint: 
+hint: 	git branch -m <name>
+Initialized empty Git repository in /etc/voicecard/.git/
+git add --all
+git commit -m "origin configures"
+[master (root-commit) 3da903c] origin configures
+ 7 files changed, 1482 insertions(+)
+ create mode 100644 ac108_6mic.state
+ create mode 100644 ac108_asound.state
+ create mode 100644 asound_2mic.conf
+ create mode 100644 asound_4mic.conf
+ create mode 100644 asound_6mic.conf
+ create mode 100644 dkms.conf
+ create mode 100644 wm8960_asound.state
+Created symlink /etc/systemd/system/sysinit.target.wants/seeed-voicecard.service ? /lib/systemd/system/seeed-voicecard.service.
+------------------------------------------------------
+Please reboot your raspberry pi to apply all settings
+Enjoy!
+------------------------------------------------------
+pi@raspberrypi:~/seeed-voicecard $ 
+
+
+SWITCH OFF - SWITCH ON
+
+
+
+pi@raspberrypi:~ $ cd seeed-voicecard
+pi@raspberrypi:~/seeed-voicecard $ sudo ./install.sh
+Hit:1 http://raspbian.raspberrypi.org/raspbian bullseye InRelease              
+Hit:2 http://archive.raspberrypi.org/debian bullseye InRelease                 
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+All packages are up to date.
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+raspberrypi-kernel is already the newest version (1:1.20220331-1).
+raspberrypi-kernel-headers is already the newest version (1:1.20220331-1).
+The following package was automatically installed and is no longer required:
+  libfuse2
+Use 'sudo apt autoremove' to remove it.
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+E: Unable to locate package linux-raspi
+E: Unable to locate package linux-headers-raspi
+E: Unable to locate package linux-image-raspi
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+dkms is already the newest version (2.8.4-3).
+git is already the newest version (1:2.30.2-1).
+i2c-tools is already the newest version (4.2-1+b1).
+libasound2-plugins is already the newest version (1.2.2-2).
+The following package was automatically installed and is no longer required:
+  libfuse2
+Use 'sudo apt autoremove' to remove it.
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+
+-------- Uninstall Beginning --------
+Module:  seeed-voicecard
+Version: 0.3
+Kernel:  5.15.32-v7l+ (armv7l)
+-------------------------------------
+
+Status: Before uninstall, this module version was ACTIVE on this kernel.
+
+snd-soc-wm8960.ko:
+ - Uninstallation
+   - Deleting from: /lib/modules/5.15.32-v7l+/kernel/sound/soc/codecs/
+ - Original module
+   - No original module was found for this module on this kernel.
+   - Use the dkms install command to reinstall any previous module version.
+
+
+snd-soc-ac108.ko:
+ - Uninstallation
+   - Deleting from: /lib/modules/5.15.32-v7l+/kernel/sound/soc/codecs/
+ - Original module
+   - No original module was found for this module on this kernel.
+   - Use the dkms install command to reinstall any previous module version.
+
+
+snd-soc-seeed-voicecard.ko:
+ - Uninstallation
+   - Deleting from: /lib/modules/5.15.32-v7l+/kernel/sound/soc/bcm/
+ - Original module
+   - No original module was found for this module on this kernel.
+   - Use the dkms install command to reinstall any previous module version.
+
+depmod.......
+
+DKMS: uninstall completed.
+
+------------------------------
+Deleting module version: 0.3
+completely from the DKMS tree.
+------------------------------
+Done.
+
+Creating symlink /var/lib/dkms/seeed-voicecard/0.3/source ->
+                 /usr/src/seeed-voicecard-0.3
+
+DKMS: add completed.
+
+Kernel preparation unnecessary for this kernel.  Skipping...
+
+Building module:
+cleaning build area...
+make -j4 KERNELRELEASE=5.15.32-v7l+ -C /lib/modules/5.15.32-v7l+/build M=/var/lib/dkms/seeed-voicecard/0.3/build.....
+cleaning build area...
+
+DKMS: build completed.
+
+snd-soc-wm8960.ko:
+Running module version sanity check.
+ - Original module
+   - No original module exists within this kernel
+ - Installation
+   - Installing to /lib/modules/5.15.32-v7l+/kernel/sound/soc/codecs/
+
+snd-soc-ac108.ko:
+Running module version sanity check.
+ - Original module
+   - No original module exists within this kernel
+ - Installation
+   - Installing to /lib/modules/5.15.32-v7l+/kernel/sound/soc/codecs/
+
+snd-soc-seeed-voicecard.ko:
+Running module version sanity check.
+ - Original module
+   - No original module exists within this kernel
+ - Installation
+   - Installing to /lib/modules/5.15.32-v7l+/kernel/sound/soc/bcm/
+
+depmod......
+
+DKMS: install completed.
+cp: cannot stat 'seeed-2mic-voicecard.dtbo': No such file or directory
+cp: cannot stat 'seeed-4mic-voicecard.dtbo': No such file or directory
+cp: cannot stat 'seeed-8mic-voicecard.dtbo': No such file or directory
+mkdir: cannot create directory ‘/etc/voicecard’: File exists
+git init
+Reinitialized existing Git repository in /etc/voicecard/.git/
+git add --all
+git commit -m "origin configures"
+On branch master
+nothing to commit, working tree clean
+------------------------------------------------------
+Please reboot your raspberry pi to apply all settings
+Enjoy!
+------------------------------------------------------
+pi@raspberrypi:~/seeed-voicecard $ 
+
+
+
+SWITCH OFF - SWITCH ON
+
+
+
+pi@raspberrypi:~ $ cd WM8960-Audio-HAT
+pi@raspberrypi:~/WM8960-Audio-HAT $ sudo ./install.sh
+Hit:1 http://raspbian.raspberrypi.org/raspbian bullseye InRelease
+Hit:2 http://archive.raspberrypi.org/debian bullseye InRelease
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+All packages are up to date.
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+raspberrypi-kernel is already the newest version (1:1.20220331-1).
+raspberrypi-kernel-headers is already the newest version (1:1.20220331-1).
+The following package was automatically installed and is no longer required:
+  libfuse2
+Use 'sudo apt autoremove' to remove it.
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+dkms is already the newest version (2.8.4-3).
+git is already the newest version (1:2.30.2-1).
+i2c-tools is already the newest version (4.2-1+b1).
+libasound2-plugins is already the newest version (1.2.2-2).
+The following package was automatically installed and is no longer required:
+  libfuse2
+Use 'sudo apt autoremove' to remove it.
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+Created symlink /etc/systemd/system/sysinit.target.wants/wm8960-soundcard.service ? /lib/systemd/system/wm8960-soundcard.service.
+Job for wm8960-soundcard.service failed because the control process exited with error code.
+See "systemctl status wm8960-soundcard.service" and "journalctl -xe" for details.
+------------------------------------------------------
+Please reboot your raspberry pi to apply all settings
+Enjoy!
+------------------------------------------------------
+pi@raspberrypi:~/WM8960-Audio-HAT $ 
+
+SWITCH OFF - SWITCH ON
+
+pi@raspberrypi:~ $ aplay -l
+**** List of PLAYBACK Hardware Devices ****
+card 0: Headphones [bcm2835 Headphones], device 0: bcm2835 Headphones [bcm2835 Headphones]
+  Subdevices: 8/8
+  Subdevice #0: subdevice #0
+  Subdevice #1: subdevice #1
+  Subdevice #2: subdevice #2
+  Subdevice #3: subdevice #3
+  Subdevice #4: subdevice #4
+  Subdevice #5: subdevice #5
+  Subdevice #6: subdevice #6
+  Subdevice #7: subdevice #7
+card 1: wm8960soundcard [wm8960-soundcard], device 0: bcm2835-i2s-wm8960-hifi wm8960-hifi-0 [bcm2835-i2s-wm8960-hifi wm8960-hifi-0]
+  Subdevices: 1/1
+  Subdevice #0: subdevice #0
+card 2: vc4hdmi0 [vc4-hdmi-0], device 0: MAI PCM i2s-hifi-0 [MAI PCM i2s-hifi-0]
+  Subdevices: 1/1
+  Subdevice #0: subdevice #0
+card 3: vc4hdmi1 [vc4-hdmi-1], device 0: MAI PCM i2s-hifi-0 [MAI PCM i2s-hifi-0]
+  Subdevices: 1/1
+  Subdevice #0: subdevice #0
+pi@raspberrypi:~ $ 
+
+
+pi@raspberrypi:~ $ sudo dkms status
+seeed-voicecard, 0.3, 5.15.32-v7l+, armv7l: installed
+pi@raspberrypi:~ $ 
+
+Pulseaudio Volume Control on Taskbar has wm8960 as a sound device input and output option
+VLC works with both Automatic (i.e. Pulseaudio) and ALSA witth no distortion
+
+/lib/modules/$(shell uname -r)/kernel/sound/soc/codecs/snd-soc-wm8960.ko
+/lib/modules/$(shell uname -r)/kernel/sound/soc/codecs/snd-soc-ac108.ko
+/lib/modules/$(shell uname -r)/kernel/sound/soc/bcm/snd-soc-seeed-voicecard.ko
+
+
+
+
+
