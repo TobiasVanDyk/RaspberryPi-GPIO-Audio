@@ -15,7 +15,7 @@ An ALSA capabilities script indicates this DAC to perform up to 32bit audio reso
   
 ### Instructions for kernel 5.15.xx (2022)
 
-Currently (28 April 2022) there are three different ways to install the wm8960 soundcard on the new 5.15 kernel - only the third method works with pulseaudio, the first two methods only works with ALSA and the direct wm8960 mixer device. Of the three, only the third method had been tested (as working), with the RaspiOS 64-bit 5.15 kernel. The second and third methods are preferred because they implement a functional pulseaudio and/or ALSA sounddevice. For a combination of the waveshare and seeed drivers refer to [**this posting**](https://github.com/waveshare/WM8960-Audio-HAT/issues/44#issuecomment-1113349654).
+Currently (28 April 2022) there are three different ways to install the wm8960 soundcard on the new 5.15 kernel - only the third method works with pulseaudio, the first two methods only works with ALSA and the direct wm8960 mixer device. Of the three, only the third method had been tested (as working), with the RaspiOS 64-bit 5.15 kernel. The second and third methods are preferred because they implement a functional pulseaudio and/or ALSA sounddevice. For a combination of the waveshare and seeed drivers refer to [**this posting**](https://github.com/waveshare/WM8960-Audio-HAT/issues/44#issuecomment-1113349654). This combo method was tried and yields afully functional pulseaudio and alsa wm8960 sound device - refer to [install-combo](install-combo.txt) for the details of the installation.
   
 *It is advisable to power-cycle the Raspberry Pi after installation of the sound driver - a reboot may not be enough.*
 
