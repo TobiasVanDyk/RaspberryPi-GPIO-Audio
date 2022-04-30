@@ -400,7 +400,7 @@ seeed-voicecard, 0.3, 5.15.32-v7l+, armv7l: installed
 pi@raspberrypi:~ $ 
 
 Pulseaudio Volume Control on Taskbar has wm8960 as a sound device input and output option
-VLC works with both Automatic (i.e. Pulseaudio) and ALSA witth no distortion
+VLC works with both Automatic (i.e. Pulseaudio) and ALSA with no distortion
 
 /lib/modules/$(shell uname -r)/kernel/sound/soc/codecs/snd-soc-wm8960.ko
 /lib/modules/$(shell uname -r)/kernel/sound/soc/codecs/snd-soc-ac108.ko
