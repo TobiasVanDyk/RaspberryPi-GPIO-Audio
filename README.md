@@ -15,43 +15,22 @@ An ALSA capabilities script indicates this DAC to perform up to 32bit audio reso
   
 ### Instructions for kernel 5.15.xx (2022)
 
-Currently (28 April 2022) there are three different ways to install the wm8960 soundcard on the new 5.15 kernel - only the third method works with pulseaudio, the first two methods only works with ALSA and the direct wm8960 mixer device. Of the three, only the third method had been tested (as working), with the RaspiOS 64-bit 5.15 kernel. The second and third methods are preferred because they implement a functional pulseaudio and/or ALSA sounddevice. For a combination of the waveshare and seeed drivers refer to [**this posting**](https://github.com/waveshare/WM8960-Audio-HAT/issues/44#issuecomment-1113349654). This combo method was tried and yields a noise-free functional pulseaudio and alsa wm8960 sound device - refer to [**install-combo**](install-combo.txt) for the details of the installation.
+Currently (May 2022) there are two different ways to install the wm8960 soundcard on the new 5.15 kernel - both method works with pulseaudio and/or alsa. For a combination of the waveshare (Dr-Ni April version) and seeed drivers (HinTak version) refer to [**this posting**](https://github.com/waveshare/WM8960-Audio-HAT/issues/44#issuecomment-1113349654). This combo method was tried and yields a noise-free functional pulseaudio and alsa wm8960 sound device - refer to [**install-combo**](install-combo.txt) for the details of the installation.
   
 *It is advisable to power-cycle the Raspberry Pi after installation of the sound driver - a reboot may not be enough.*
 
-**Install 1 - Use the new 26 April 2022 Waveshare Drivers:**
+**Install 1 - Use the new 1 May 2022 Waveshare Drivers:**
 ```
 git clone https://github.com/waveshare/WM8960-Audio-HAT
 cd WM8960-Audio-HAT
 sudo ./install.sh
 sudo reboot
 ```
+After the reboot aplay -l should show the wm8960 soundcard. If present, ignore the message "failed to load i2s-mmap" - it does load from config.txt and it is required.
 
-After the reboot aplay -l should show the wm8960 soundcard. To use it in VLC change the Audio settings to use ALSA and the direct wm8960 mixing device - it does not work with Pulseaudio. With this method the (default) pulseaudio volume control on the task bar will not have a wm8960 sound device option - the other two methods do enable a wm8960 sound-device selection via the task bar's pulseaudio volume control.
-
-**Install 2 - Use the April 2022 dr-ni modified Waveshare Drivers:**
-
-To [**install**](https://github.com/dr-ni/WM8960-Audio-HAT) first uninstall the old waveshare driver and reboot then delete the old WM8960-Audio-HAT folder.
+**Install 2 - Install using the [Seeed Voicecard](https://www.seeedstudio.com/ReSpeaker-2-Mics-Pi-HAT.html) Drivers**
   
-```
-git clone https://github.com/dr-ni/WM8960-Audio-HAT
-cd WM8960-Audio-HAT
-sudo ./install.sh
-sudo reboot
-```
-  
-Ignore the message "failed to load i2s-mmap" - it does load from config.txt and it is required.
-  
-VLC plays clearly when using an ALSA + wm8960-soundcard-direct-mixer setting in VLC Preferences -> Audio-settings. Using Pulseaudio here causes a noisy distortion. Also change other programs audio preferences to also use ALSA and a wm8960 direct mixer. *The distortion seems too be a level-overload distortion - when experimenting with the wm8960 alsamixer settings the distortion can be reduced by adjusting the playback gain (between the 3D and MonoOut controls), to a lower level (for example -10 dB), or even reducing the headphone (or speaker) level and increasing the application volume level to compensate. It is not a re-sampling noise.*   
-  
-For the settings see the screenshot below [**First to Eleven's cover of Boulevard of Broken Dreams by Green Day**](https://www.youtube.com/watch?v=ilLTcTXTI0E)
-<p align="left">
-<img src="images/2022-04-08-124050_1920x1080_scrot.png" width="500" />  
-<br>
-
-**Install 3 - Install using the [Seeed Voicecard](https://www.seeedstudio.com/ReSpeaker-2-Mics-Pi-HAT.html) Drivers**
-  
-To [**install**](https://github.com/HinTak/seeed-voicecard) first uninstall the waveshare WM8960 driver and reboot then delete the old WM8960-Audio-HAT folder. (It is better to remove power from the Raspberry Pi and HAT completely before installing these drivers.) For more details about this HAT look [**here**](https://github.com/TobiasVanDyk/RaspberryPi-GPIO-Audio/tree/master/ReSpeaker2MicsPiHAT) or [**here**](https://www.seeedstudio.com/ReSpeaker-2-Mics-Pi-HAT.html). This driver works without any adjustments to audio settings (i.e. works with both pulseaudio and alsa without distortion or noise).
+To [**install**](https://github.com/HinTak/seeed-voicecard) first uninstall the waveshare WM8960 driver and reboot then delete the old WM8960-Audio-HAT folder. (It is better to remove power from the Raspberry Pi and HAT completely before installing these drivers.) For more details about this HAT look [**here**](https://github.com/TobiasVanDyk/RaspberryPi-GPIO-Audio/tree/master/ReSpeaker2MicsPiHAT) or [**here**](https://www.seeedstudio.com/ReSpeaker-2-Mics-Pi-HAT.html). This driver also works without any adjustments to audio settings (i.e. works with both pulseaudio and alsa without distortion or noise).
   
 ```
 git clone https://github.com/HinTak/seeed-voicecard
@@ -62,6 +41,11 @@ sudo reboot
 **This seeed install also [works](64bit-kernel-515xx/) on the 64bit kernel-5,15.xx. You may want to change kernel.img to kernel8.img in the install.sh but it is not necessary.**
 
 If you use headphones as the primary output, use pavucontrol (sudo apt install pavucontrol), run it then and select wm8960-headphones instead of the wm8960-speaker, and adjust the neadphone volume to above 0. This will make the headphone level sticky.
+  
+For the troubleshooting with an alsa-only settings, see the screenshot below [**First to Eleven's cover of Boulevard of Broken Dreams by Green Day**](https://www.youtube.com/watch?v=ilLTcTXTI0E)
+<p align="left">
+<img src="images/2022-04-08-124050_1920x1080_scrot.png" width="500" />  
+<br>
   
   
 ### Instructions for kernel 5.10.xx (2021)
