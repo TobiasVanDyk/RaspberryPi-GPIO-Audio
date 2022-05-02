@@ -1,0 +1,135 @@
+pi@raspberrypi:~ $ git clone https://github.com/waveshare/WM8960-Audio-HAT
+Cloning into 'WM8960-Audio-HAT'...
+remote: Enumerating objects: 76, done.
+remote: Counting objects: 100% (38/38), done.
+remote: Compressing objects: 100% (14/14), done.
+remote: Total 76 (delta 27), reused 25 (delta 24), pack-reused 38
+Receiving objects: 100% (76/76), 62.20 KiB | 16.00 KiB/s, done.
+Resolving deltas: 100% (36/36), done.
+pi@raspberrypi:~ $ cd WM8960-Audio-HAT
+pi@raspberrypi:~/WM8960-Audio-HAT $ sudo ./install.sh 
+Hit:1 http://archive.raspberrypi.org/debian bullseye InRelease                 
+Hit:2 http://raspbian.raspberrypi.org/raspbian bullseye InRelease              
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+All packages are up to date.
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+raspberrypi-kernel is already the newest version (1:1.20220331-1).
+The following package was automatically installed and is no longer required:
+  libfuse2
+Use 'sudo apt autoremove' to remove it.
+The following NEW packages will be installed:
+  raspberrypi-kernel-headers
+0 upgraded, 1 newly installed, 0 to remove and 0 not upgraded.
+Need to get 28.6 MB of archives.
+After this operation, 182 MB of additional disk space will be used.
+Get:1 http://archive.raspberrypi.org/debian bullseye/main armhf raspberrypi-kernel-headers armhf 1:1.20220331-1 [28.6 MB]
+Fetched 28.6 MB in 26s (1,097 kB/s)                                            
+Selecting previously unselected package raspberrypi-kernel-headers.
+(Reading database ... 177768 files and directories currently installed.)
+Preparing to unpack .../raspberrypi-kernel-headers_1%3a1.20220331-1_armhf.deb ...
+Unpacking raspberrypi-kernel-headers (1:1.20220331-1) ...
+Setting up raspberrypi-kernel-headers (1:1.20220331-1) ...
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+git is already the newest version (1:2.30.2-1).
+i2c-tools is already the newest version (4.2-1+b1).
+i2c-tools set to manually installed.
+libasound2-plugins is already the newest version (1.2.2-2).
+libasound2-plugins set to manually installed.
+The following package was automatically installed and is no longer required:
+  libfuse2
+Use 'sudo apt autoremove' to remove it.
+The following additional packages will be installed:
+  dctrl-tools
+Suggested packages:
+  debtags menu
+The following NEW packages will be installed:
+  dctrl-tools dkms
+0 upgraded, 2 newly installed, 0 to remove and 0 not upgraded.
+Need to get 172 kB of archives.
+After this operation, 673 kB of additional disk space will be used.
+Get:1 http://mirror.liquidtelecom.com/raspbian/raspbian bullseye/main armhf dctrl-tools armhf 2.24-3 [94.2 kB]
+Get:2 http://mirror.liquidtelecom.com/raspbian/raspbian bullseye/main armhf dkms all 2.8.4-3 [78.2 kB]
+Fetched 172 kB in 9s (19.6 kB/s)
+Selecting previously unselected package dctrl-tools.
+(Reading database ... 229181 files and directories currently installed.)
+Preparing to unpack .../dctrl-tools_2.24-3_armhf.deb ...
+Unpacking dctrl-tools (2.24-3) ...
+Selecting previously unselected package dkms.
+Preparing to unpack .../archives/dkms_2.8.4-3_all.deb ...
+Unpacking dkms (2.8.4-3) ...
+Setting up dctrl-tools (2.24-3) ...
+Setting up dkms (2.8.4-3) ...
+Processing triggers for man-db (2.9.4-2) ...
+
+Creating symlink /var/lib/dkms/wm8960-soundcard/1.0/source ->
+                 /usr/src/wm8960-soundcard-1.0
+
+DKMS: add completed.
+
+Kernel preparation unnecessary for this kernel.  Skipping...
+
+Building module:
+cleaning build area...
+make -j4 KERNELRELEASE=5.15.32-v7l+ -C /lib/modules/5.15.32-v7l+/build M=/var/lib/dkms/wm8960-soundcard/1.0/build....
+cleaning build area...
+
+DKMS: build completed.
+
+snd-soc-wm8960.ko:
+Running module version sanity check.
+ - Original module
+   - Found /lib/modules/5.15.32-v7l+/kernel/sound/soc/codecs/snd-soc-wm8960.ko
+   - Storing in /var/lib/dkms/wm8960-soundcard/original_module/5.15.32-v7l+/armv7l/
+   - Archiving for uninstallation purposes
+ - Installation
+   - Installing to /lib/modules/5.15.32-v7l+/kernel/sound/soc/codecs/
+
+snd-soc-wm8960-soundcard.ko:
+Running module version sanity check.
+ - Original module
+ - Installation
+   - Installing to /lib/modules/5.15.32-v7l+/kernel/sound/soc/bcm/
+
+depmod.......
+
+DKMS: install completed.
+Created symlink /etc/systemd/system/sysinit.target.wants/wm8960-soundcard.service → /lib/systemd/system/wm8960-soundcard.service.
+Job for wm8960-soundcard.service failed because the control process exited with error code.
+See "systemctl status wm8960-soundcard.service" and "journalctl -xe" for details.
+------------------------------------------------------
+Please reboot your raspberry pi to apply all settings
+Enjoy!
+------------------------------------------------------
+pi@raspberrypi:~/WM8960-Audio-HAT $ 
+
+pi@raspberrypi:~ $ aplay -l
+**** List of PLAYBACK Hardware Devices ****
+card 0: Headphones [bcm2835 Headphones], device 0: bcm2835 Headphones [bcm2835 Headphones]
+  Subdevices: 8/8
+  Subdevice #0: subdevice #0
+  Subdevice #1: subdevice #1
+  Subdevice #2: subdevice #2
+  Subdevice #3: subdevice #3
+  Subdevice #4: subdevice #4
+  Subdevice #5: subdevice #5
+  Subdevice #6: subdevice #6
+  Subdevice #7: subdevice #7
+card 1: vc4hdmi0 [vc4-hdmi-0], device 0: MAI PCM i2s-hifi-0 [MAI PCM i2s-hifi-0]
+  Subdevices: 1/1
+  Subdevice #0: subdevice #0
+card 2: vc4hdmi1 [vc4-hdmi-1], device 0: MAI PCM i2s-hifi-0 [MAI PCM i2s-hifi-0]
+  Subdevices: 1/1
+  Subdevice #0: subdevice #0
+card 3: wm8960soundcard [wm8960-soundcard], device 0: bcm2835-i2s-wm8960-hifi wm8960-hifi-0 [bcm2835-i2s-wm8960-hifi wm8960-hifi-0]
+  Subdevices: 0/1
+  Subdevice #0: subdevice #0
+pi@raspberrypi:~ $ 
+pi@raspberrypi:~ $ sudo dkms status
+wm8960-soundcard, 1.0
+
