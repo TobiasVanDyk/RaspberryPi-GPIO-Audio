@@ -125,7 +125,7 @@ The result is something like shown below - remember to select the wm8960 audio d
 <img src="images/respeaker1.png" width="200" />  
 <img src="images/respeaker2.png" width="300" /> 
 <img src="images/SeedWM8960.png" width="300" />   
-<br
+<br>
     
 * The [**Makerfabs**](https://www.makerfabs.com/voice-interaction-hat-for-raspberry-pi.html) [**Raspi-Voice-Interaction-Hat**](https://github.com/Makerfabs/Raspi-Voice-Interaction-Hat) also uses the [**WM8960 codec**](Makerfabs-Voice-Interaction-Hat/Makerfabs-Voice-Interaction-Hat-Schematic.pdf).
 <p align="left">
