@@ -107,27 +107,27 @@ The result is something like shown below - remember to select the wm8960 audio d
 <img src="images/rpirpi1.jpg" width="300" />   
 <br>
   
-[**Waveshare WM8960 Stereo CODEC General purpose module**](https://www.waveshare.com/wm8960-audio-board.htm)
+* [**Waveshare WM8960 Stereo CODEC General purpose module**](https://www.waveshare.com/wm8960-audio-board.htm)
 <p align="left">
 <img src="images/module1.jpg" width="200" />  
 <img src="images/module2.jpg" width="200" /> 
 <img src="images/WM8960Schematic.jpg" width="300" /> 
 <br>
  
- [**Raspberry Pi and Waveshare WM8960 Stereo CODEC General purpose module**](https://www.waveshare.com/wm8960-audio-board.htm)
+ * [**Raspberry Pi and Waveshare WM8960 Stereo CODEC General purpose module**](https://www.waveshare.com/wm8960-audio-board.htm)
 <p align="left">
 <img src="images/rpimodule1.jpg" width="300" />  
 <img src="images/rpimodule2.jpg" width="300" /> 
 <br>
 
-The WM8960 CODEC is also used by the [**Seeed voicecard**](https://github.com/respeaker/seeed-voicecard) or [**ReSpeaker 2-Mics Pi HAT**](https://wiki.seeedstudio.com/ReSpeaker_2_Mics_Pi_HAT/).
+* The WM8960 CODEC is also used by the [**Seeed voicecard**](https://github.com/respeaker/seeed-voicecard) or [**ReSpeaker 2-Mics Pi HAT**](https://wiki.seeedstudio.com/ReSpeaker_2_Mics_Pi_HAT/).
 <p align="left">
 <img src="images/respeaker1.png" width="200" />  
 <img src="images/respeaker2.png" width="300" /> 
 <img src="images/SeedWM8960.png" width="300" />   
 <br
     
-The [**Makerfabs**](https://www.makerfabs.com/voice-interaction-hat-for-raspberry-pi.html) [**Raspi-Voice-Interaction-Hat**](https://github.com/Makerfabs/Raspi-Voice-Interaction-Hat) also uses the [**WM8960 codec**](Makerfabs-Voice-Interaction-Hat/Makerfabs-Voice-Interaction-Hat-Schematic.pdf).
+* The [**Makerfabs**](https://www.makerfabs.com/voice-interaction-hat-for-raspberry-pi.html) [**Raspi-Voice-Interaction-Hat**](https://github.com/Makerfabs/Raspi-Voice-Interaction-Hat) also uses the [**WM8960 codec**](Makerfabs-Voice-Interaction-Hat/Makerfabs-Voice-Interaction-Hat-Schematic.pdf).
 <p align="left">
 <img src="images/Makerfabs-Voice-Interaction-Hat1.jpg" width="300" />  
 <img src="images/Makerfabs-Voice-Interaction-Hat2.jpg" width="300" />  
