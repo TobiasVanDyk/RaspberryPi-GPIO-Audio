@@ -126,3 +126,9 @@ The WM8960 CODEC is also used by the [**Seeed voicecard**](https://github.com/re
 <img src="images/respeaker2.png" width="300" /> 
 <img src="images/SeedWM8960.png" width="300" />   
 <br
+    
+The [**Makerfabs**](https://www.makerfabs.com/voice-interaction-hat-for-raspberry-pi.html) [**Raspi-Voice-Interaction-Hat**](https://github.com/Makerfabs/Raspi-Voice-Interaction-Hat) also uses the WM8960 codec.
+<p align="left">
+<img src="images/Makerfabs-Voice-Interaction-Hat1.jpg" width="300" />  
+<img src="images/Makerfabs-Voice-Interaction-Hat1.jpg" width="300" />  
+<br    
