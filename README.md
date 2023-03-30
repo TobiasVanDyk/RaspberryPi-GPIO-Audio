@@ -11,7 +11,19 @@ An ALSA capabilities script indicates this DAC to perform up to 32bit audio reso
 <img src="images/pic3.jpg" width="400" />  
 <img src="images/WM8960HatSchematic.jpg" width="300" /> 
 <br>
+
+### Instructions for kernel 6.1.19.xx (2023)
+
+Currently (March 2023) the default update for the 32bit install of RPi OS boots the 64bit kernel after the update to 6.1.19 - change that to boot the 32bit kernel by adding arm_64bit=0 to /boot/config.txt, and check with uname -a -> Linux raspberrypi 6.1.19-v7l+ #1637 SMP Tue Mar 14 11:07:55 GMT 2023 armv7l GNU/Linux.
   
+**Install - Use the new March 2023 Waveshare Drivers:**
+```
+git clone https://github.com/waveshare/WM8960-Audio-HAT
+cd WM8960-Audio-HAT
+sudo ./install.sh
+sudo reboot
+```
+After the reboot aplay -l should show the wm8960 soundcard. If present, ignore the message "failed to load i2s-mmap" - it does load from config.txt and it is required.
   
 ### Instructions for kernel 5.15.xx (2022)
 
