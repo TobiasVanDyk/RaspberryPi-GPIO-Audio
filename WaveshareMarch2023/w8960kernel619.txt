@@ -1,0 +1,36 @@
+sudo nano /boot/config.txt
+arm_64bit=0
+
+uname -a
+Linux raspberrypi 6.1.19-v7l+ #1637 SMP Tue Mar 14 11:07:55 GMT 2023 armv7l GNU/Linux
+
+=================================
+sudo apt install gcc-aarch64-linux-gnu
+https://github.com/raspberrypi/linux/issues/5408
+
+
+Tried:
+apt install --reinstall raspberrypi-kernel-headers
+Manually reinstall:
+http://archive.raspberrypi.org/debian/pool/main/r/raspberrypi-firmware/raspberrypi-kernel-headers_1.20230317-1_arm64.deb ( Got error that system is armhf)
+
+http://archive.raspberrypi.org/debian/pool/main/r/raspberrypi-firmware/raspberrypi-kernel-headers_1.20230317-1_armhf.deb (installed without issue)
+
+
+-->    Tried: apt install --reinstall raspberrypi-kernel-headers Manually reinstall: http://archive.raspberrypi.org/debian/pool/main/r/raspberrypi-firmware/raspberrypi-kernel-headers_1.20230317-1_arm64.deb ( Got error that system is armhf)
+
+--force-all
+
+
+ arm_64bit=0
+
+#5395 OOM Killer issue, better apply the lru_gen workaround
+https://github.com/raspberrypi/linux/issues/5395
+
+
+Thanks, this helped.
+However, one would argue that this change of kernel architecture is not a good thing from the user's perspective. This brings the system in somewhat inconsistent state when kernel and dpkg architectures do not match.
+I wasted few hours trying to figure out why I was unable to install OctoDash. Apparently OctoDash install script checks the kernel architecture and decides what package architecture to install. When it saw 'aarch64', it selected the arm64 package and dpkg refused to install it. I am not an expert and do not know if OctoDash is doing the right thing, just giving you an example of troubles the users might get.
+Anyway, I am happy with the solution. Feel free to close this issue if you are not planning to reconsider the current behavior.
+
+
