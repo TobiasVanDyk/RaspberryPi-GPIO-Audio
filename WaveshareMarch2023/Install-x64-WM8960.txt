@@ -1,0 +1,107 @@
+pi@raspberrypi:~ $ git clone https://github.com/waveshare/WM8960-Audio-HAT
+Cloning into 'WM8960-Audio-HAT'...
+remote: Enumerating objects: 79, done.
+remote: Counting objects: 100% (41/41), done.
+remote: Compressing objects: 100% (17/17), done.
+remote: Total 79 (delta 29), reused 25 (delta 24), pack-reused 38
+Receiving objects: 100% (79/79), 62.96 KiB | 3.50 MiB/s, done.
+Resolving deltas: 100% (38/38), done.
+pi@raspberrypi:~ $ cd WM8960-Audio-HAT
+pi@raspberrypi:~/WM8960-Audio-HAT $ sudo ./install.sh 
+Hit:1 http://deb.debian.org/debian bullseye InRelease
+Hit:2 http://security.debian.org/debian-security bullseye-security InRelease   
+Hit:3 http://deb.debian.org/debian bullseye-updates InRelease                  
+Hit:4 http://archive.raspberrypi.org/debian bullseye InRelease                 
+Reading package lists... Done                              
+Building dependency tree... Done
+Reading state information... Done
+All packages are up to date.
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+raspberrypi-kernel is already the newest version (1:1.20230317-1).
+The following package was automatically installed and is no longer required:
+  libfuse2
+Use 'sudo apt autoremove' to remove it.
+The following NEW packages will be installed:
+  raspberrypi-kernel-headers
+0 upgraded, 1 newly installed, 0 to remove and 0 not upgraded.
+Need to get 10.2 MB of archives.
+After this operation, 64.7 MB of additional disk space will be used.
+Get:1 http://archive.raspberrypi.org/debian bullseye/main arm64 raspberrypi-kernel-headers arm64 1:1.20230317-1 [10.2 MB]
+Fetched 10.2 MB in 8s (1,299 kB/s)                                             
+Selecting previously unselected package raspberrypi-kernel-headers.
+(Reading database ... 126995 files and directories currently installed.)
+Preparing to unpack .../raspberrypi-kernel-headers_1%3a1.20230317-1_arm64.deb ...
+Unpacking raspberrypi-kernel-headers (1:1.20230317-1) ...
+Setting up raspberrypi-kernel-headers (1:1.20230317-1) ...
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+libasound2-plugins is already the newest version (1.2.2-2).
+libasound2-plugins set to manually installed.
+i2c-tools is already the newest version (4.2-1+b1).
+i2c-tools set to manually installed.
+git is already the newest version (1:2.30.2-1+deb11u2).
+The following package was automatically installed and is no longer required:
+  libfuse2
+Use 'sudo apt autoremove' to remove it.
+The following additional packages will be installed:
+  dctrl-tools
+Suggested packages:
+  debtags menu
+The following NEW packages will be installed:
+  dctrl-tools dkms
+0 upgraded, 2 newly installed, 0 to remove and 0 not upgraded.
+Need to get 179 kB of archives.
+After this operation, 720 kB of additional disk space will be used.
+Get:1 http://deb.debian.org/debian bullseye/main arm64 dctrl-tools arm64 2.24-3 [101 kB]
+Get:2 http://deb.debian.org/debian bullseye/main arm64 dkms all 2.8.4-3 [78.2 kB]
+Fetched 179 kB in 0s (364 kB/s)
+Selecting previously unselected package dctrl-tools.
+(Reading database ... 145063 files and directories currently installed.)
+Preparing to unpack .../dctrl-tools_2.24-3_arm64.deb ...
+Unpacking dctrl-tools (2.24-3) ...
+Selecting previously unselected package dkms.
+Preparing to unpack .../archives/dkms_2.8.4-3_all.deb ...
+Unpacking dkms (2.8.4-3) ...
+Setting up dctrl-tools (2.24-3) ...
+Setting up dkms (2.8.4-3) ...
+Processing triggers for man-db (2.9.4-2) ...
+
+Creating symlink /var/lib/dkms/wm8960-soundcard/1.0/source ->
+                 /usr/src/wm8960-soundcard-1.0
+
+DKMS: add completed.
+
+Kernel preparation unnecessary for this kernel.  Skipping...
+
+Building module:
+cleaning build area...
+make -j4 KERNELRELEASE=6.1.19-v8+ -C /lib/modules/6.1.19-v8+/build M=/var/lib/dkms/wm8960-soundcard/1.0/build....
+cleaning build area...
+
+DKMS: build completed.
+
+snd-soc-wm8960.ko.xz:
+Running module version sanity check.
+ - Original module
+ - Installation
+   - Installing to /lib/modules/6.1.19-v8+/updates/dkms/
+
+snd-soc-wm8960-soundcard.ko.xz:
+Running module version sanity check.
+ - Original module
+ - Installation
+   - Installing to /lib/modules/6.1.19-v8+/updates/dkms/
+
+depmod.....
+
+DKMS: install completed.
+Created symlink /etc/systemd/system/sysinit.target.wants/wm8960-soundcard.service → /lib/systemd/system/wm8960-soundcard.service.
+Job for wm8960-soundcard.service failed because the control process exited with error code.
+See "systemctl status wm8960-soundcard.service" and "journalctl -xe" for details.
+------------------------------------------------------
+Please reboot your raspberry pi to apply all settings
+Enjoy!
+------------------------------------------------------
