@@ -16,6 +16,8 @@ An ALSA capabilities script indicates this DAC to perform up to 32bit audio reso
 ### Instructions for kernel 6.1.19.xx (2023)
 
 Currently (March 2023) the default update for the 32bit install of RPi OS boots the 64bit kernel after the update to 6.1.19 - change that to boot the 32bit kernel by adding arm_64bit=0 to /boot/config.txt, and check with uname -a -> Linux raspberrypi 6.1.19-v7l+ #1637 SMP Tue Mar 14 11:07:55 GMT 2023 armv7l GNU/Linux.
+
+It is therefore advisable to use the 64bit Raspi OS - see [**Install-x64-WM8960**](https://github.com/TobiasVanDyk/RaspberryPi-GPIO-Audio/blob/master/WaveshareMarch2023/Install-x64-WM8960.txt) for the driver install results. 
   
 **Install - Use the new March 2023 Waveshare Drivers:**
 ```
