@@ -1,5 +1,5 @@
 # RaspberryPi-GPIO-Audio
-Audio DAC interfaced through Raspberry Pi GPIO such as i2s
+Audio DAC interfaced through Raspberry Pi GPIO such as i2s and also two fan-cooled Raspberry Pi 4B [**3d-printed cases**](https://github.com/TobiasVanDyk/RaspberryPi-GPIO-Audio/blob/master/Raspberry-Pi-Audio-DAC-Cases/README.md) with two different audio DAC hats.
 
 ### WM8960 Wolfson Audio DAC
 
