@@ -23,7 +23,7 @@ The two audio DAC hats are also used [**here**](https://github.com/TobiasVanDyk/
 
 All the modelling variations/customisation were made using [**OpenSCAD**](https://openscad.org/) and [**TinkerCAD**](https://www.tinkercad.com/).
 
-The cases were printed using PLA (with no post-print finishing) using a <img src="images/CR-20 Pro - Unboxing and Printing Test.jpg" width="16" height="16"/> [**Creality CR-20 Pro 3D-printer**](https://www.creality3dofficial.com/products/creality-cr-20-pro-3d-printer) 
+The cases were printed using PLA (with no post-print finishing) using a [**Creality CR-20 Pro 3D-printer**](https://3dprinterly.com/3d-printer-cr-20-pro-specifications-features-and-benefits/).
 
 The two Pi DACs were used with two 7" inch LCD displays and 3D printed cases for type C and H **Waveshare 7 inch displays** were printed. These are 7 inch LCD HDMI 1024x600 IPS and QLED displays: [**type (C)**](https://www.waveshare.com/7inch-hdmi-lcd-c.htm) and [**type (H**](https://www.waveshare.com/7hp-capqled.htm). These were based on the [**design here**](https://www.thingiverse.com/thing:3743598), and the front and back STL files are here in the folder [model](/model).
 
