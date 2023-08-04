@@ -5,6 +5,8 @@ Audio DAC interfaced through Raspberry Pi GPIO such as i2s and also two fan-cool
 
 [**Waveshare WM8960 Play/Record Audio Hat**](https://www.waveshare.com/wm8960-audio-hat.htm) with a [**Wiki**](https://www.waveshare.com/wiki/WM8960_Audio_HAT) and a [**Github repository**](https://github.com/waveshare/WM8960-Audio-HAT/).
 
+It is also used in the [**Minidexed Synth**](https://github.com/TobiasVanDyk/Microdexed-Synth-Variations/tree/main/Minidexed1).
+
 An ALSA capabilities script indicates this DAC to perform up to 32bit audio resolution at a 384kHZ sampling rate - see [**alsa-capabilties**](ReSpeaker2MicsPiHAT/alsa-capabilities.txt) card 4.
 
 <p align="left">
