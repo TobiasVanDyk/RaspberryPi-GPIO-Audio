@@ -10,8 +10,8 @@ It is also used in the [**Minidexed Synth**](https://github.com/TobiasVanDyk/Mic
 An ALSA capabilities script indicates this DAC to perform up to 32bit audio resolution at a 384kHZ sampling rate - see [**alsa-capabilties**](ReSpeaker2MicsPiHAT/alsa-capabilities.txt) card 4.
 
 <p align="left">
-<img src="images/pic3.jpg" width="400" />  
-<img src="images/WM8960HatSchematic.jpg" width="300" /> 
+<img src="images/pic0.jpg" height="280" />  
+<img src="images/WM8960HatSchematic.jpg" height="280" /> 
 <br>
 
   
