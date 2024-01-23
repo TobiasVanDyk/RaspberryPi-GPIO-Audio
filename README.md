@@ -159,10 +159,10 @@ The result is something like shown below - remember to select the wm8960 audio d
 <br>
   
 * The WM8960 CODEC is also used by the [**Adafruit Voice Bonnet Pi Hat**](https://www.adafruit.com/product/4757).
+
+Install instructions which will work for the Pi5 are also [**given there**](https://learn.adafruit.com/adafruit-voice-bonnet?view=all#audio-setup).
+
 <p align="left">
-
-Install instructions which will work for the Pi5 are also [**given here**](https://learn.adafruit.com/adafruit-voice-bonnet?view=all#audio-setup).<br>
-
 <img src="Adafruit-Voice-Bonnet/voice-bonnet.jpg" height="160" />  
 <img src="Adafruit-Voice-Bonnet/adafruit_products_Voice_Bonnet_sch_1.png" height="160" /> 
 <img src="Adafruit-Voice-Bonnet/adafruit_products_Voice_Bonnet_sch_2.png" height="160" />   
