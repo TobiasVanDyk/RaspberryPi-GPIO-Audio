@@ -14,7 +14,15 @@ An ALSA capabilities script indicates this DAC to perform up to 32bit audio reso
 <img src="images/WM8960HatSchematic.jpg" height="280" /> 
 <br>
 
-  
+### Instructions for kernel 6.1.0-rpi7-rpi-2712 (2024)
+
+To **enable the WM8960 Waveshare hat with the Raspberry Pi 5** the following is required:<br>
+Refer to the [**solved issue here**](https://github.com/waveshare/WM8960-Audio-HAT/issues/51), and then use the [**script here to install**](https://github.com/ubopod/ubo-sdk/blob/main/system/setup/install_wm8960.sh).
+
+<p align="left">
+<img src="images/kernelPi5.png" height="160" /> 
+</p>
+
 ### Instructions for kernel 6.1.19.xx (2023)
 
 Currently (March 2023) the default update for the 32bit install of RPi OS boots the 64bit kernel after the update to 6.1.19 - change that to boot the 32bit kernel by adding arm_64bit=0 to /boot/config.txt, and check with uname -a -> Linux raspberrypi 6.1.19-v7l+ #1637 SMP Tue Mar 14 11:07:55 GMT 2023 armv7l GNU/Linux.
