@@ -20,7 +20,7 @@ To **enable the WM8960 Waveshare hat with the Raspberry Pi 5** the following is 
 Refer to the [**solved issue here**](https://github.com/waveshare/WM8960-Audio-HAT/issues/51), and then use the [**script here to install**](https://github.com/ubopod/ubo-sdk/blob/main/system/setup/install_wm8960.sh). Also see the [**build here**](https://github.com/TobiasVanDyk/Raspberry-Pi-PC-PSU-Desktop-Computer-with-a-Hard-Disk-Drive-and-Fan-and-Switch).
 
 <p align="left">
-<img src="[images/kernelPi5.png](https://github.com/TobiasVanDyk/Raspberry-Pi-PC-PSU-Desktop-Computer-with-a-Hard-Disk-Drive-and-Fan-and-Switch/blob/master/NVME/pimoroni1.png)" height="160" /> 
+<img src="https://github.com/TobiasVanDyk/Raspberry-Pi-PC-PSU-Desktop-Computer-with-a-Hard-Disk-Drive-and-Fan-and-Switch/blob/master/NVME/pimoroni1.png" height="160" /> 
 <img src="images/kernelPi5.png" height="160" /> 
 </p>
 
