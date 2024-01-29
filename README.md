@@ -14,12 +14,13 @@ An ALSA capabilities script indicates this DAC to perform up to 32bit audio reso
 <img src="images/WM8960HatSchematic.jpg" height="280" /> 
 <br>
 
-### Instructions for kernel 6.1.0-rpi7-rpi-2712 (2024)
+### Instructions for Pi5 with kernel 6.1.0-rpi7-rpi-2712 (2024)
 
 To **enable the WM8960 Waveshare hat with the Raspberry Pi 5** the following is required:<br>
-Refer to the [**solved issue here**](https://github.com/waveshare/WM8960-Audio-HAT/issues/51), and then use the [**script here to install**](https://github.com/ubopod/ubo-sdk/blob/main/system/setup/install_wm8960.sh).
+Refer to the [**solved issue here**](https://github.com/waveshare/WM8960-Audio-HAT/issues/51), and then use the [**script here to install**](https://github.com/ubopod/ubo-sdk/blob/main/system/setup/install_wm8960.sh). Also see the [**build here**](https://github.com/TobiasVanDyk/Raspberry-Pi-PC-PSU-Desktop-Computer-with-a-Hard-Disk-Drive-and-Fan-and-Switch).
 
 <p align="left">
+<img src="[images/kernelPi5.png](https://github.com/TobiasVanDyk/Raspberry-Pi-PC-PSU-Desktop-Computer-with-a-Hard-Disk-Drive-and-Fan-and-Switch/blob/master/NVME/pimoroni1.png)" height="160" /> 
 <img src="images/kernelPi5.png" height="160" /> 
 </p>
 
